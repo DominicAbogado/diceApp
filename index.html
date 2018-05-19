@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Dice App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" /> -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 statInput">
+                <h2>Model Profile</h2>
+                <form>
+                    <div class="formLayout">
+                        <input id="numAttacks" type="submit" value="Attacks">
+                        <input type="number" id="attack-input">
+                    </div>
+                    <div class="formLayout">
+                        <input id="toHit" type="submit" value="To Hit">
+                        <input type="number" id="hit-input">
+                    </div>
+                    <div class="formLayout">
+                        <input id="toWound" type="submit" value="To Wound">
+                        <input type="number" id="wound-input">
+                    </div>
+                    <div class="formLayout">
+                        <input id="rendValue" type="submit" value="Rend">
+                        <input type="number" id="rend-input">
+                    </div>
+                    <div class="formLayout">
+                        <button type="button" id="Success" class="btn btn-dark">Calculate</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-4 statOutput">
+                <h2>Stats Output</h2>
+
+                <div class="stats"> Number of Attacks
+                    <p id="attack-output"></p>
+                </div>
+                <div class="stats">To Hit
+                    <p id="hit-output"></p>
+                </div>
+                <div class="stats">To Wound
+                    <p id="wound-output"></p>
+                </div>
+                <div class="stats">Rend
+                    <p id="rend-output"></p>
+                </div>
+                <div class="stats">Success
+                    <p id="success-output"></p>
+                </div>
+            </div>
+            <div class="col-lg-4 statOutput">
+                <h2>Success Output</h2>
+
+                    <div class="stats"> Successful Hits
+                        <p id="hitSuccess-output"></p>
+                    </div>
+                    <div class="stats"> Successful Wounds
+                        <p id="woundSuccess-output"></p>
+                    </div>
+                    <!-- <div class="stats">To Wound
+                        <p id="wound-output"></p>
+                    </div>
+                    <div class="stats">Rend
+                        <p id="rend-output"></p>
+                    </div>
+                    <div class="stats">Success
+                        <p id="success-output"></p>
+                    </div> -->
+                </div>
+        </div>
+    </div>
+
+
+
+    <script src='assets/logic.js'></script>
+</body>
