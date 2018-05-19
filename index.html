@@ -25,6 +25,10 @@
                         <input type="number" id="attack-input">
                     </div>
                     <div class="formLayout">
+                        <input id="attackDmg" type="submit" value="Damage/Atk">
+                        <input type="number" id="damage-input">
+                    </div>
+                    <div class="formLayout">
                         <input id="toHit" type="submit" value="To Hit">
                         <input type="number" id="hit-input">
                     </div>
@@ -47,6 +51,9 @@
                 <div class="stats"> Number of Attacks
                     <p id="attack-output"></p>
                 </div>
+                <div class="stats"> Attack Damage
+                    <p id="damage-output"></p>
+                </div>
                 <div class="stats">To Hit
                     <p id="hit-output"></p>
                 </div>
@@ -63,13 +70,16 @@
             <div class="col-lg-4 statOutput">
                 <h2>Success Output</h2>
 
-                    <div class="stats"> Successful Hits
-                        <p id="hitSuccess-output"></p>
-                    </div>
-                    <div class="stats"> Successful Wounds
-                        <p id="woundSuccess-output"></p>
-                    </div>
-                    <!-- <div class="stats">To Wound
+                <div class="stats"> Successful Hits
+                    <p id="hitSuccess-output"></p>
+                </div>
+                <div class="stats"> Successful Wounds
+                    <p id="woundSuccess-output"></p>
+                </div>
+                <div class="stats"> Damage
+                    <p id="damageSuccess-output"></p>
+                </div>
+                <!-- <div class="stats">To Wound
                         <p id="wound-output"></p>
                     </div>
                     <div class="stats">Rend
@@ -78,7 +88,7 @@
                     <div class="stats">Success
                         <p id="success-output"></p>
                     </div> -->
-                </div>
+            </div>
         </div>
     </div>
 

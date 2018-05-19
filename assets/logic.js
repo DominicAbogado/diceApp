@@ -2,6 +2,7 @@ $(document).ready(function() {
   console.log("is working");
 
   var attacks = 0;
+  var damage = 0;
   var toHit = 0;
   var toWound = 0;
   var rend = 0;
@@ -24,7 +25,15 @@ $(document).ready(function() {
     $("#attack-output").append(attacks);
     console.log(attacks);
   }
-
+  function renderdamage() {
+    $("#damage-output").empty();
+    damage = 0;
+    var damageNumber = $("#damage-input").val();
+    damageNumber = parseInt(damageNumber);
+    damage = damage + damageNumber;
+    $("#damage-output").append(damage);
+    console.log(damage);
+  }
   //function for hits
   function renderhit() {
     $("#hit-output").empty();
@@ -67,6 +76,11 @@ $(document).ready(function() {
     event.preventDefault();
     renderattack();
   });
+  //Button for Damage
+  $("#attackDmg").on("click", function(event) {
+    event.preventDefault();
+    renderdamage();
+  });
   //Button for hits
   $("#toHit").on("click", function(event) {
     event.preventDefault();
@@ -89,11 +103,20 @@ $(document).ready(function() {
     $("#hitSuccess-output").append(successHits);
   }
 
-  //Wound Success
+  //Wound and Damage Success
   function woundSuccess() {
     var woundSuccess = successHits * ((7 - toHit) / 6);
     $("#woundSuccess-output").append(woundSuccess);
+    var totDamage = woundSuccess * damage;
+    $("#damageSuccess-output").append(totDamage);
   }
+
+  //Damage Total
+  // function damageTotal(){
+  //   var totDamage = woundSuccess * damage;
+  //   $("#damageSuccess-output").append(totDamage);
+
+  // }
 
   //Success Click
   $("#Success").on("click", function(event) {
@@ -101,6 +124,7 @@ $(document).ready(function() {
     renderattack();
     renderhit();
     renderwound();
+    renderdamage()
     hitSuccess();
     woundSuccess();
   });
